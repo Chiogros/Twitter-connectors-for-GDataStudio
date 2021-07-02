@@ -1,0 +1,26 @@
+{
+  "exceptionLogging": "NONE",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "TwitterCore",
+        "version": "0",
+        "libraryId": "18XMx_hojRIHKtNwV1g-tOuAqSruAoe0Znf4S7UrnALj9IExsGeEb8LCK",
+        "developmentMode": true
+      }
+    ]
+  },
+  "dataStudio": {
+    "name": "Twitter Users followers",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/1200px-Twitter_Bird.svg.png",
+    "company": "Chiogros",
+    "companyUrl": "https://github.com/Chiogros",
+    "addonUrl": "https://github.com/Chiogros/Twitter-connectors-for-GDataStudio/Users-followers",
+    "supportUrl": "https://github.com/Chiogros/Twitter-connectors-for-GDataStudio/issues",
+    "description": "Get Twitter Users followers, for free.",
+    "sources": [
+      "twitter"
+    ]
+  }
+}

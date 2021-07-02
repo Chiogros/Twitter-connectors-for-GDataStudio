@@ -1,0 +1,17 @@
+{
+  "exceptionLogging": "NONE",
+  "runtimeVersion": "V8",
+  "dependencies": {},
+  "dataStudio": {
+    "name": "Twitter Core",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/1200px-Twitter_Bird.svg.png",
+    "company": "Chiogros",
+    "companyUrl": "https://github.com/Chiogros",
+    "addonUrl": "https://github.com/Chiogros/Twitter-connectors-for-GDataStudio/Core",
+    "supportUrl": "https://github.com/Chiogros/Twitter-connectors-for-GDataStudio/issues",
+    "description": "Core Twitter connector, used by other connectors. Do not use it.",
+    "sources": [
+      "twitter"
+    ]
+  }
+}
