@@ -1,11 +1,52 @@
-# Twitter-connectors-for-GDataStudio
+# Twitter connectors for GDataStudio
 Google Data Studio connectors to fetch data from Twitter API.
 
-## To create a new Twitter connector
+## Connectors organization
+There's a main connector called "Core": it retrieve and handle data to bring it properly for GDS and set authentication method.
+Child connectors (like Users-followers) use Core functions and have functions specific for their API endpoint.
+
+## How to use them on GDS
+
+### Setup Core connector
+1. Go to [Google Apps Script](https://script.google.com)
+2. Create new project
+3. Name it
+4. Go to project settings
+5. Check "Display appsscript.json manifest file"
+6. Take note about Script ID (useful for child connectors)
+7. Go back to code window
+8. Create files and set code for Core connector
+
+### Setup child connector
+1. Go to [Google Apps Script](https://script.google.com)
+2. Create new project
+3. Name it
+4. Go to project settings
+5. Check "Display appsscript.json manifest file"
+7. Go back to code window
+8. Create files and set code for child connector
+9. In appsscript.json, change Dependencies > Libraries > LibraryID to the Core script ID you took note
+10. Deploy it (easiest by going though "Use old editor" > "Publish" > "Publish from manifest file")
+
+### Use connectors in GDS
+1. Go to [Google Data Studio](https://datastudio.google.com)
+2. Create > Data source
+3. Search for your deployed child connector
+4. Fill credentials
+5. Now you can import it in your GDS reports
+
+## Get access token
+1. Create a Twitter developer account
+2. On your developer portal, create an app
+3. Check app permissions that must match with your needs
+4. Take note of the Bearer token for your app (since you cannot view it again, or past token will be overwritten)
+5. Use it to fill your connector credentials
+
+## How to create a new Twitter connector
 First, copy Users-followers connector as template.
 
 Then you have 3 things to change :
-1. Change `endpoint` and `subEndpoint` global vars to a GET method you want 
+1. Change `endpoint` and `subEndpoint` global vars to the GET method you want 
 https://developer.twitter.com/en/docs/twitter-api/api-reference-index
 ```javascript
 // core.gs
